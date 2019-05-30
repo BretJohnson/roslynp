@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Globalization;
-using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Text;
 using Roslyn.Utilities;
 
@@ -329,27 +328,6 @@ namespace Microsoft.CodeAnalysis
         public abstract bool IsSuppressed { get; }
 
         /// <summary>
-        /// Gets the <see cref="SuppressionInfo"/> for suppressed diagnostics, i.e. <see cref="IsSuppressed"/> = true.
-        /// Otherwise, returns null.
-        /// </summary>
-        public SuppressionInfo GetSuppressionInfo(Compilation compilation)
-        {
-            if (!IsSuppressed)
-            {
-                return null;
-            }
-
-            AttributeData attribute;
-            var suppressMessageState = new SuppressMessageAttributeState(compilation);
-            if (!suppressMessageState.IsDiagnosticSuppressed(this, out attribute))
-            {
-                attribute = null;
-            }
-
-            return new SuppressionInfo(this.Id, attribute);
-        }
-
-        /// <summary>
         /// Returns true if this diagnostic is enabled by default by the author of the diagnostic.
         /// </summary>
         internal virtual bool IsEnabledByDefault { get { return this.Descriptor.IsEnabledByDefault; } }
@@ -536,15 +514,6 @@ namespace Microsoft.CodeAnalysis
                 default:
                     return 1;
             }
-        }
-
-        /// <summary>
-        /// Returns true if a diagnostic is not configurable, i.e. cannot be suppressed or filtered or have its severity changed.
-        /// For example, compiler errors are always non-configurable.
-        /// </summary>
-        internal virtual bool IsNotConfigurable()
-        {
-            return AnalyzerManager.HasNotConfigurableTag(this.CustomTags);
         }
     }
 

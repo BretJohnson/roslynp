@@ -4,6 +4,7 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <RootNamespace>Microsoft.CodeAnalysis</RootNamespace>
+    <LangVersion>8.0</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DefineConstants>$(DefineConstants);COMPILERCORE</DefineConstants>
@@ -20,19 +21,11 @@
     </PackageDescription>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="$(NuGetPackageRoot)\microsoft.diasymreader.native\$(MicrosoftDiaSymReaderNativeVersion)\runtimes\win\native\Microsoft.DiaSymReader.Native.x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Visible>false</Visible>
-      <Pack>false</Pack>
-    </Content>
-    <Content Include="$(NuGetPackageRoot)\microsoft.diasymreader.native\$(MicrosoftDiaSymReaderNativeVersion)\runtimes\win\native\Microsoft.DiaSymReader.Native.amd64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Visible>false</Visible>
-      <Pack>false</Pack>
-    </Content>
+    <Compile Remove="RuleSet\**" />
+    <EmbeddedResource Remove="RuleSet\**" />
+    <None Remove="RuleSet\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Shared\DesktopShim.cs" />
     <Compile Update="CodeAnalysisResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -48,8 +41,6 @@
       will import everything but content files from Microsoft.CodeAnalysis.Analyzers, specifically, analyzers.
     -->
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="$(MicrosoftCodeAnalysisAnalyzersVersion)" PrivateAssets="ContentFiles" />
-
-    <PackageReference Include="Microsoft.DiaSymReader.Native" Version="$(MicrosoftDiaSymReaderNativeVersion)" PrivateAssets="all" />
     <PackageReference Include="System.Collections.Immutable" Version="$(SystemCollectionsImmutableVersion)" />
     <PackageReference Include="System.Memory" Version="$(SystemMemoryVersion)" />
     <PackageReference Include="System.Reflection.Metadata" Version="$(SystemReflectionMetadataVersion)" />
@@ -115,16 +106,7 @@
     <EmbeddedResource Include="Resources\default.win32manifest" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\CodeAnalysisRules.ruleset">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RuleSet\RuleSetSchema.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <PublicAPI Include="PublicAPI.Shipped.txt" />
     <PublicAPI Include="PublicAPI.Unshipped.txt" />
   </ItemGroup>
-  <Import Project="..\AnalyzerDriver\AnalyzerDriver.projitems" Label="Shared" />
-  <Import Project="..\..\..\Dependencies\CodeAnalysis.Debugging\Microsoft.CodeAnalysis.Debugging.projitems" Label="Shared" />
-  <Import Project="..\..\..\Dependencies\PooledObjects\Microsoft.CodeAnalysis.PooledObjects.projitems" Label="Shared" />
 </Project>

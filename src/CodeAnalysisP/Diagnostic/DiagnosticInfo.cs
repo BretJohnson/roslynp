@@ -51,8 +51,6 @@ namespace Microsoft.CodeAnalysis
         internal DiagnosticInfo(CommonMessageProvider messageProvider, int errorCode, params object[] arguments)
             : this(messageProvider, errorCode)
         {
-            AssertMessageSerializable(arguments);
-
             _arguments = arguments;
         }
 
@@ -88,34 +86,6 @@ namespace Microsoft.CodeAnalysis
             var customTags = GetCustomTags(defaultSeverity);
             return new DiagnosticDescriptor(id, title, messageFormat, category, defaultSeverity,
                 isEnabledByDefault: true, description: description, helpLinkUri: helpLink, customTags: customTags);
-        }
-
-        [Conditional("DEBUG")]
-        internal static void AssertMessageSerializable(object[] args)
-        {
-            foreach (var arg in args)
-            {
-                Debug.Assert(arg != null);
-
-                if (arg is IFormattable)
-                {
-                    continue;
-                }
-
-                var type = arg.GetType();
-                if (type == typeof(string) || type == typeof(AssemblyIdentity))
-                {
-                    continue;
-                }
-
-                var info = type.GetTypeInfo();
-                if (info.IsPrimitive)
-                {
-                    continue;
-                }
-
-                throw ExceptionUtilities.UnexpectedValue(type);
-            }
         }
 
         // Only the compiler creates instances.
@@ -347,13 +317,6 @@ namespace Microsoft.CodeAnalysis
                     argumentsToUse = InitializeArgumentListIfNeeded(argumentsToUse);
                     argumentsToUse[i] = embedded.GetMessage(formatProvider);
                     continue;
-                }
-
-                var symbol = _arguments[i] as ISymbol;
-                if (symbol != null)
-                {
-                    argumentsToUse = InitializeArgumentListIfNeeded(argumentsToUse);
-                    argumentsToUse[i] = _messageProvider.GetErrorDisplayString(symbol);
                 }
             }
 

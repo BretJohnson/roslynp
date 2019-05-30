@@ -148,12 +148,6 @@ namespace Microsoft.CodeAnalysis
                     return false;
                 }
 
-                if (AnalyzerExecutor.IsAnalyzerExceptionDiagnostic(this))
-                {
-                    // We have custom Equals logic for diagnostics generated for analyzer exceptions.
-                    return AnalyzerExecutor.AreEquivalentAnalyzerExceptionDiagnostics(this, other);
-                }
-
                 return _descriptor.Equals(other._descriptor)
                     && _messageArgs.SequenceEqual(other._messageArgs, (a, b) => a == b)
                     && _location == other._location

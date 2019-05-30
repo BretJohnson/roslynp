@@ -218,10 +218,5 @@ namespace Microsoft.CodeAnalysis
 
             return this;
         }
-
-        internal sealed override bool IsNotConfigurable()
-        {
-            return this.Info.IsNotConfigurable();
-        }
     }
 }

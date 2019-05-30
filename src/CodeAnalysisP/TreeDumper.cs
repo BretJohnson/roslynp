@@ -190,12 +190,6 @@ namespace Microsoft.CodeAnalysis
                 return string.Format("{{{0}}}", string.Join(", ", seq.Cast<object>().Select(DumperString).ToArray()));
             }
 
-            var symbol = o as ISymbol;
-            if (symbol != null)
-            {
-                return symbol.ToDisplayString(SymbolDisplayFormat.TestFormat);
-            }
-
             return o.ToString();
         }
     }

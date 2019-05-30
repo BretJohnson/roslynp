@@ -3,7 +3,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using Microsoft.CodeAnalysis.Diagnostics;
 using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis
@@ -198,23 +197,6 @@ namespace Microsoft.CodeAnalysis
                     this.Title.GetHashCode())))))));
         }
 
-        /// <summary>
-        /// Gets the effective severity of diagnostics created based on this descriptor and the given <see cref="CompilationOptions"/>.
-        /// </summary>
-        /// <param name="compilationOptions">Compilation options</param>
-        public ReportDiagnostic GetEffectiveSeverity(CompilationOptions compilationOptions)
-        {
-            if (compilationOptions == null)
-            {
-                throw new ArgumentNullException(nameof(compilationOptions));
-            }
-
-            // Create a dummy diagnostic to compute the effective diagnostic severity for given compilation options
-            // TODO: Once https://github.com/dotnet/roslyn/issues/3650 is fixed, we can avoid creating a no-location diagnostic here.
-            var effectiveDiagnostic = compilationOptions.FilterDiagnostic(Diagnostic.Create(this, Location.None));
-            return effectiveDiagnostic != null ? MapSeverityToReport(effectiveDiagnostic.Severity) : ReportDiagnostic.Suppress;
-        }
-
         private static ReportDiagnostic MapSeverityToReport(DiagnosticSeverity severity)
         {
             switch (severity)
@@ -230,15 +212,6 @@ namespace Microsoft.CodeAnalysis
                 default:
                     throw ExceptionUtilities.UnexpectedValue(severity);
             }
-        }
-
-        /// <summary>
-        /// Returns true if diagnostic descriptor is not configurable, i.e. cannot be suppressed or filtered or have its severity changed.
-        /// For example, compiler errors are always non-configurable.
-        /// </summary>
-        internal bool IsNotConfigurable()
-        {
-            return AnalyzerManager.HasNotConfigurableTag(this.CustomTags);
         }
     }
 }

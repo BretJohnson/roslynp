@@ -27,23 +27,9 @@ namespace Microsoft.CodeAnalysis
         public bool IsInSource { get { return SourceTree != null; } }
 
         /// <summary>
-        /// Returns true if the location is in metadata.
-        /// </summary>
-        public bool IsInMetadata { get { return MetadataModule != null; } }
-
-        /// <summary>
         /// The syntax tree this location is located in or <c>null</c> if not in a syntax tree.
         /// </summary>
         public virtual SyntaxTree SourceTree { get { return null; } }
-
-        /// <summary>
-        /// Returns the metadata module the location is associated with or <c>null</c> if the module is not available.
-        /// </summary>
-        /// <remarks>
-        /// Might return null even if <see cref="IsInMetadata"/> returns true. The module symbol might not be available anymore, 
-        /// for example, if the location is serialized and deserialized.
-        /// </remarks>
-        public virtual IModuleSymbol MetadataModule { get { return null; } }
 
         /// <summary>
         /// The location within the syntax tree that this location is associated with.
@@ -91,13 +77,6 @@ namespace Microsoft.CodeAnalysis
             if (IsInSource)
             {
                 result += "(" + this.SourceTree?.FilePath + this.SourceSpan + ")";
-            }
-            else if (IsInMetadata)
-            {
-                if (this.MetadataModule != null)
-                {
-                    result += "(" + this.MetadataModule.Name + ")";
-                }
             }
             else
             {

@@ -55,22 +55,6 @@ namespace Microsoft.CodeAnalysis
         public abstract bool HasCompilationUnitRoot { get; }
 
         /// <summary>
-        /// The options used by the parser to produce the syntax tree.
-        /// </summary>
-        public ParseOptions Options
-        {
-            get
-            {
-                return this.OptionsCore;
-            }
-        }
-
-        /// <summary>
-        /// The options used by the parser to produce the syntax tree.
-        /// </summary>
-        protected abstract ParseOptions OptionsCore { get; }
-
-        /// <summary>
         /// Option to specify custom behavior for each warning in this tree.
         /// </summary>
         /// <returns>
@@ -330,29 +314,9 @@ namespace Microsoft.CodeAnalysis
         public abstract IList<TextChange> GetChanges(SyntaxTree oldTree);
 
         /// <summary>
-        /// Gets the checksum + algorithm id to use in the PDB.
+        /// Returns a new tree whose root is as specified and other properties are copied from the current tree.
         /// </summary>
-        internal Cci.DebugSourceInfo GetDebugSourceInfo()
-        {
-            if (_lazyChecksum.IsDefault)
-            {
-                var text = this.GetText();
-                _lazyChecksum = text.GetChecksum();
-                _lazyHashAlgorithm = text.ChecksumAlgorithm;
-            }
-
-            Debug.Assert(!_lazyChecksum.IsDefault);
-            Debug.Assert(_lazyHashAlgorithm != default(SourceHashAlgorithm));
-
-            // NOTE: If this tree is to be embedded, it's debug source info should have
-            // been obtained via EmbeddedText.GetDebugSourceInfo() and not here.
-            return new Cci.DebugSourceInfo(_lazyChecksum, _lazyHashAlgorithm);
-        }
-
-        /// <summary>
-        /// Returns a new tree whose root and options are as specified and other properties are copied from the current tree.
-        /// </summary>
-        public abstract SyntaxTree WithRootAndOptions(SyntaxNode root, ParseOptions options);
+        public abstract SyntaxTree WithRoot(SyntaxNode root);
 
         /// <summary>
         /// Returns a new tree whose <see cref="FilePath"/> is the specified node and other properties are copied from the current tree.

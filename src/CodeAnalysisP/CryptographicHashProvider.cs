@@ -183,15 +183,6 @@ namespace Microsoft.CodeAnalysis
             }
         }
 
-        internal static ImmutableArray<byte> ComputeHash(HashAlgorithmName algorithmName, IEnumerable<Blob> bytes)
-        {
-            using (var incrementalHash = IncrementalHash.CreateHash(algorithmName))
-            {
-                incrementalHash.AppendData(bytes);
-                return ImmutableArray.Create(incrementalHash.GetHashAndReset());
-            }
-        }
-
         internal static ImmutableArray<byte> ComputeHash(HashAlgorithmName algorithmName, IEnumerable<ArraySegment<byte>> bytes)
         {
             using (var incrementalHash = IncrementalHash.CreateHash(algorithmName))

@@ -67,10 +67,7 @@ namespace Microsoft.CodeAnalysis.Text
 
         internal static void ValidateChecksumAlgorithm(SourceHashAlgorithm checksumAlgorithm)
         {
-            if (!Cci.DebugSourceDocument.IsSupportedAlgorithm(checksumAlgorithm))
-            {
-                throw new ArgumentException(CodeAnalysisResources.UnsupportedHashAlgorithm, nameof(checksumAlgorithm));
-            }
+            // NOTE: For RoslynP all checksum algorithms are valid
         }
 
         /// <summary>
@@ -198,8 +195,13 @@ namespace Microsoft.CodeAnalysis.Text
 
             // We must compute the checksum and embedded text blob now while we still have the original bytes in hand.
             // We cannot re-encode to obtain checksum and blob as the encoding is not guaranteed to round-trip.
+
+            // NOTE: RoslynP does not support embedded text
+            if (canBeEmbedded)
+                throw new ArgumentException("RoslynP does not support embedded text");
+
             var checksum = CalculateChecksum(stream, checksumAlgorithm);
-            var embeddedTextBlob = canBeEmbedded ? EmbeddedText.CreateBlob(stream) : default(ImmutableArray<byte>);
+            var embeddedTextBlob = default(ImmutableArray<byte>);
             return new StringText(text, encoding, checksum, checksumAlgorithm, embeddedTextBlob);
         }
 
@@ -257,8 +259,9 @@ namespace Microsoft.CodeAnalysis.Text
 
             // We must compute the checksum and embedded text blob now while we still have the original bytes in hand.
             // We cannot re-encode to obtain checksum and blob as the encoding is not guaranteed to round-trip.
+            // NOTE: RoslynP does not support embedded Text
             var checksum = CalculateChecksum(buffer, 0, length, checksumAlgorithm);
-            var embeddedTextBlob = canBeEmbedded ? EmbeddedText.CreateBlob(new ArraySegment<byte>(buffer, 0, length)) : default(ImmutableArray<byte>);
+            var embeddedTextBlob = default(ImmutableArray<byte>);
             return new StringText(text, encoding, checksum, checksumAlgorithm, embeddedTextBlob);
         }
 
