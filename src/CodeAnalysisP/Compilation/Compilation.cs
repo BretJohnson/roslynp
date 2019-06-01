@@ -20,7 +20,7 @@ namespace Microsoft.CodeAnalysis
     /// new compilation from scratch, as the new compilation can reuse information from the old
     /// compilation.
     /// </summary>
-    public abstract partial class Compilation
+    public abstract class Compilation
     {
         /// <summary>
         /// Returns true if this is a case sensitive compilation, false otherwise.  Case sensitivity
