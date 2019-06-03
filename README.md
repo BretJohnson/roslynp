@@ -1,9 +1,8 @@
 ## Welcome the RoslynP (Roslyn Portable) Compiler Platform
 
-[Roslyn](https://github.com/dotnet/roslyn) brings the concept of the compiler as a service to the C# and VB languages. See [here](https://www.instinctools.com/blog/microsoft-roslyn-using-the-compiler-as-a-service) for more about the history of Roslyn and its motivations.
+[Roslyn](https://github.com/dotnet/roslyn) brings the concept of the compiler as a service to the C# and VB languages. See [here](https://www.instinctools.com/blog/microsoft-roslyn-using-the-compiler-as-a-service) for the history of Roslyn and its motivations.
 
-Roslyn is a very powerful - but it's only for C# and VB. 
-RoslynP (P stands for Portable) is a Roslyn subset, allowing Roslyn core concepts to be used to build tooling for any language. RoslynP brings Roslyn's goodness everywhere.
+RoslynP (P for Portable) is a Roslyn subset allowing Roslyn core concepts to be used to build tooling for any language, not just C# and VB. RoslynP brings Roslyn's goodness everywhere.
 
 This project is currently experimental.
 
@@ -16,19 +15,23 @@ Currently RoslynP includes functionality for:
 - Diagnostics (errors/warnings/info): Diagnostic, DiagnosticSeverity, etc.
 - Compilation driver: Compilation (much simplified from normal Roslyn)
 
-RoslynP adopts the philosophy of starting small-ish and adding more Roslyn-style functionality as needs dictate. That makes the project more manageable. Syntax tree support is the core, needed by most all languages.
+### What does RoslynP exclude?
 
-### What does RoslynP not include?
-
-RoslynP removes a lot from traditional Roslyn - it's about 1/5th the size. Some of what's excluded is:
+RoslynP is about 1/5th the size of Roslyn. Some of what's excluded:
 
 - Everything C# or VB specific
-- Semantic model (I*Symbol classes) - we might add this in the future, but it's less generally useful than syntax tree support
+- Semantic model (`I*Symbol` classes) - we might add this in the future, but it's less generally useful than syntax tree support
 - Support for emitting code (IL) - RoslynP is intended to build the language front end; back end support needs are less general
 
-And again, we can add more from Roslyn to RoslynP as there's a need, if at least one client wants it.
+RoslynP adopts the philosophy of starting small-ish and adding more Roslyn-style functionality as needs dictate. That makes the project more manageable. We will bring more from Roslyn to RoslynP as there's a need, if at least one client wants it
 
-### Roslyn getting started, much of which applies also RoslynP
+### Will the RoslynP and Roslyn projects ever converge?
+
+Perhaps one day. But note that the projects serve different needs - Roslyn is about having a first class C# and VB experience, with the Roslyn team focused on that. RoslynP is for other languages, maintained by its users.
+
+RoslynP was forked off the `release/dev16.1` Roslyn release. It will get occasional updates with Roslyn changes, though the forked code doesn't change often.
+
+### Roslyn getting started, much of which also applies to RoslynP
 
 * [Roslyn Overview](https://github.com/dotnet/roslyn/wiki/Roslyn%20Overview) 
 * Tutorial articles by Alex Turner in MSDN Magazine
@@ -40,17 +43,4 @@ And again, we can add more from Roslyn to RoslynP as there's a need, if at least
 * [Syntax Visualizer Tool](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)
 * [Syntax Quoter Tool](http://roslynquoter.azurewebsites.net)
 * [FAQ](https://github.com/dotnet/roslyn/wiki/FAQ)
-* Also take a look at our [Wiki](https://github.com/dotnet/roslyn/wiki) for more information on how to contribute, what the labels on issue mean, etc.
-
-### Contribute!
-
-Some of the best ways to contribute are to try things out, file bugs, and join in design conversations.
-
-* [Pull requests](https://github.com/dotnet/roslyn/pulls): [Open](https://github.com/dotnet/roslyn/pulls?q=is%3Aopen+is%3Apr)/[Closed](https://github.com/dotnet/roslyn/pulls?q=is%3Apr+is%3Aclosed)
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).  For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-### .NET Foundation
-
-This project is part of the [.NET Foundation](http://www.dotnetfoundation.org/projects) along with other
-projects like [the class libraries for .NET Core](https://github.com/dotnet/corefx/).
+* [Roslyn Wiki Home](https://github.com/dotnet/roslyn/wiki)
