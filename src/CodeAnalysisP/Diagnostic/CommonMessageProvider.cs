@@ -4,7 +4,7 @@ using System;
 using System.Collections.Concurrent;
 using System.Globalization;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     /// <summary>
     /// Abstracts the ability to classify and load messages for error codes. Allows the error

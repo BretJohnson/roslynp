@@ -3,12 +3,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Text;
 using System.Diagnostics;
 using Roslyn.Utilities;
 using System.Collections.Immutable;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     /// <summary>
     /// Implements a readonly collection over a set of existing collections. This can be used to

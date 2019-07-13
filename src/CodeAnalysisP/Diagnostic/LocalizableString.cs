@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     /// <summary>
     /// A string that may possibly be formatted differently depending on culture.

@@ -5,7 +5,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.IO;
 
-namespace Microsoft.CodeAnalysis.Collections
+namespace Microsoft.CodeAnalysisP.Collections
 {
     internal sealed class ImmutableMemoryStream : Stream
     {

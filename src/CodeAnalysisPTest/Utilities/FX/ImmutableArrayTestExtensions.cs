@@ -6,7 +6,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.IO;
 
-namespace Microsoft.CodeAnalysis.Test.Utilities
+namespace Microsoft.CodeAnalysisP.Test.Utilities
 {
     /// <summary>
     /// The collection of extension methods for the <see cref="ImmutableArray{T}"/> type

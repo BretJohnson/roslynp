@@ -6,12 +6,12 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using Microsoft.CodeAnalysis.Collections;
-using Microsoft.CodeAnalysis.PooledObjects;
-using Microsoft.CodeAnalysis.Syntax.InternalSyntax;
+using Microsoft.CodeAnalysisP.Collections;
+using Microsoft.CodeAnalysisP.PooledObjects;
+using Microsoft.CodeAnalysisP.Syntax.InternalSyntax;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     [DebuggerDisplay("{GetDebuggerDisplay(), nq}")]
     internal abstract class GreenNode : IObjectWritable

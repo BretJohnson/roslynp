@@ -6,11 +6,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
-using Microsoft.CodeAnalysis.Syntax;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Syntax;
+using Microsoft.CodeAnalysisP.Text;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     /// <summary>
     /// Represents a read-only list of <see cref="SyntaxToken"/>.

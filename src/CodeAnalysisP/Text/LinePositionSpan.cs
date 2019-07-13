@@ -3,7 +3,7 @@
 using System;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis.Text
+namespace Microsoft.CodeAnalysisP.Text
 {
     /// <summary>
     /// Immutable span represented by a pair of line number and index within the line.

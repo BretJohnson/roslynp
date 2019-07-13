@@ -4,10 +4,10 @@ using System;
 using System.Globalization;
 using System.Linq;
 using System.Resources;
-using Microsoft.CodeAnalysis.PooledObjects;
+using Microsoft.CodeAnalysisP.PooledObjects;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     /// <summary>
     /// A localizable resource string that may possibly be formatted differently depending on culture.

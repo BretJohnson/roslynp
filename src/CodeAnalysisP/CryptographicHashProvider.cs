@@ -8,10 +8,10 @@ using System.Linq;
 using System.Reflection;
 using System.Reflection.Metadata;
 using System.Security.Cryptography;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Text;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     internal abstract class CryptographicHashProvider
     {

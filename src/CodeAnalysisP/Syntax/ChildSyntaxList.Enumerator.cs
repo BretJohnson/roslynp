@@ -3,9 +3,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Text;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     public partial struct ChildSyntaxList
     {

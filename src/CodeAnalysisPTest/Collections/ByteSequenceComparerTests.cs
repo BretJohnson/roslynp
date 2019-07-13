@@ -2,7 +2,7 @@
 
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.Collections.UnitTests
+namespace Microsoft.CodeAnalysisP.Collections.UnitTests
 {
     public class ByteSequenceComparerTests
     {

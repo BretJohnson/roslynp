@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.CodeAnalysis.Syntax
+namespace Microsoft.CodeAnalysisP.Syntax
 {
     internal struct SeparatedSyntaxListBuilder<TNode> where TNode : SyntaxNode
     {

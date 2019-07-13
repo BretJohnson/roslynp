@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis.Diagnostics
+namespace Microsoft.CodeAnalysisP.Diagnostics
 {
     /// <summary>
     /// A queue whose enqueue and dequeue operations can be performed in parallel.

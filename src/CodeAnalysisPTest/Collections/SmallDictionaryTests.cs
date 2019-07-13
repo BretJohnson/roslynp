@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Text;
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.UnitTests.Collections
+namespace Microsoft.CodeAnalysisP.UnitTests.Collections
 {
     public class SmallDictionaryTests
     {

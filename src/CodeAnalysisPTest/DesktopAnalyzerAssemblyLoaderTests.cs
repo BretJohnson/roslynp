@@ -10,7 +10,7 @@ using System.Text;
 using Roslyn.Test.Utilities;
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.UnitTests
+namespace Microsoft.CodeAnalysisP.UnitTests
 {
     public sealed class DesktopAnalyzerAssemblyLoaderTests : TestBase
     {

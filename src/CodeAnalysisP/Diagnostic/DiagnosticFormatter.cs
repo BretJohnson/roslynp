@@ -2,10 +2,10 @@
 
 using System;
 using System.Globalization;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Text;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     /// <summary>
     /// Formats <see cref="Diagnostic"/> messages.

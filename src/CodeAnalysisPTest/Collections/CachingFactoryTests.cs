@@ -3,7 +3,7 @@
 using Roslyn.Test.Utilities;
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.UnitTests.Collections
+namespace Microsoft.CodeAnalysisP.UnitTests.Collections
 {
     public class CachingFactoryTests
     {

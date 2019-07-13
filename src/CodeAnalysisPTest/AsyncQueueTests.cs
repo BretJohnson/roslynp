@@ -6,13 +6,13 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.CodeAnalysis.Collections;
-using Microsoft.CodeAnalysis.Diagnostics;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Collections;
+using Microsoft.CodeAnalysisP.Diagnostics;
+using Microsoft.CodeAnalysisP.Text;
 using Roslyn.Test.Utilities;
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.UnitTests
+namespace Microsoft.CodeAnalysisP.UnitTests
 {
     public class AsyncQueueTests
     {

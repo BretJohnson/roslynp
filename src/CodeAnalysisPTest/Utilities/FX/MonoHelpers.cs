@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Microsoft.CodeAnalysis.Test.Utilities
+namespace Microsoft.CodeAnalysisP.Test.Utilities
 {
     public static class MonoHelpers
     {

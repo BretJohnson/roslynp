@@ -3,14 +3,14 @@
 using System;
 using System.Collections.Immutable;
 using System.IO;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP;
+using Microsoft.CodeAnalysisP.Text;
 using System.Text;
 using System.Diagnostics;
 using Roslyn.Utilities;
 using System.Threading.Tasks;
 
-namespace Microsoft.CodeAnalysis.Test.Utilities
+namespace Microsoft.CodeAnalysisP.Test.Utilities
 {
     public class TempFile
     {

@@ -1,6 +1,6 @@
 ﻿// Copyright (c) Microsoft.  All Rights Reserved.  Licensed under the Apache License, Version 2.0.  See License.txt in the project root for license information.
 
-using Microsoft.CodeAnalysis.Syntax.InternalSyntax;
+using Microsoft.CodeAnalysisP.Syntax.InternalSyntax;
 
 using System;
 using System.Diagnostics;
@@ -9,7 +9,7 @@ using Roslyn.Utilities;
 #if STATS
 using System.Threading;
 #endif
-namespace Microsoft.CodeAnalysis.Syntax.InternalSyntax
+namespace Microsoft.CodeAnalysisP.Syntax.InternalSyntax
 {
     /// <summary>
     /// Provides caching functionality for green nonterminals with up to 3 children.

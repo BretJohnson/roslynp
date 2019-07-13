@@ -5,13 +5,13 @@
 
 using System;
 using System.Linq;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Text;
 using Roslyn.Test.Utilities;
 using Xunit;
-using VB = Microsoft.CodeAnalysis.VisualBasic;
-using CS = Microsoft.CodeAnalysis.CSharp;
+using VB = Microsoft.CodeAnalysisP.VisualBasic;
+using CS = Microsoft.CodeAnalysisP.CSharp;
 
-namespace Microsoft.CodeAnalysis.UnitTests
+namespace Microsoft.CodeAnalysisP.UnitTests
 {
     public class CommonSyntaxTests
     {

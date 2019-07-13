@@ -4,9 +4,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Text;
 
-namespace Microsoft.CodeAnalysis.Text
+namespace Microsoft.CodeAnalysisP.Text
 {
     /// <summary>
     /// Abstract base class for <see cref="TextLine"/> collections.

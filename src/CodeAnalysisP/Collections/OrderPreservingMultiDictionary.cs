@@ -5,10 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
-using Microsoft.CodeAnalysis.PooledObjects;
+using Microsoft.CodeAnalysisP.PooledObjects;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis.Collections
+namespace Microsoft.CodeAnalysisP.Collections
 {
     /// <summary>
     /// A MultiDictionary that allows only adding, and preserves the order of values added to the 

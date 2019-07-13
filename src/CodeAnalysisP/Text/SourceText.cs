@@ -9,10 +9,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using Microsoft.CodeAnalysis.PooledObjects;
+using Microsoft.CodeAnalysisP.PooledObjects;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis.Text
+namespace Microsoft.CodeAnalysisP.Text
 {
     /// <summary>
     /// An abstraction of source text.

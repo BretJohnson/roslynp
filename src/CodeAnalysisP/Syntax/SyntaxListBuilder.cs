@@ -3,7 +3,7 @@
 using System;
 using System.Diagnostics;
 
-namespace Microsoft.CodeAnalysis.Syntax
+namespace Microsoft.CodeAnalysisP.Syntax
 {
     internal class SyntaxListBuilder
     {

@@ -14,7 +14,7 @@
 
     <!-- NuGet -->
     <IsPackable>true</IsPackable>
-    <PackageId>Microsoft.CodeAnalysis.Common</PackageId>
+    <PackageId>Microsoft.CodeAnalysisP.Common</PackageId>
     <PackageDescription>
       A shared package used by the Microsoft .NET Compiler Platform ("Roslyn").
       Do not install this package manually, it will be added as a prerequisite by other packages that require it.
@@ -37,7 +37,7 @@
       Analyzers that will be used to analyze projects that references 
       Microsoft.CodeAnalysis project or Microsoft.CodeAnalysis.Common package.
       
-      Note: PrivateAssets="ContentFiles" ensures that projects referencing Microsoft.CodeAnalysis.Common package 
+      Note: PrivateAssets="ContentFiles" ensures that projects referencing Microsoft.CodeAnalysisP.Common package 
       will import everything but content files from Microsoft.CodeAnalysis.Analyzers, specifically, analyzers.
     -->
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="$(MicrosoftCodeAnalysisAnalyzersVersion)" PrivateAssets="ContentFiles" />
@@ -49,49 +49,49 @@
     <PackageReference Include="System.Text.Encoding.CodePages" Version="$(SystemTextEncodingCodePagesVersion)" />
   </ItemGroup>
   <ItemGroup>
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.ExpressionEvaluator.ExpressionCompiler" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.ExpressionEvaluator.ExpressionCompiler" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.ExpressionEvaluator.ExpressionCompiler" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.ExpressionEvaluator.ExpressionCompiler" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.ExpressionEvaluator.ExpressionCompiler" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.ExpressionEvaluator.ExpressionCompiler" />
     <InternalsVisibleTo Include="csc" />
     <InternalsVisibleTo Include="csi" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.Scripting" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.Scripting" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.Scripting" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.Scripting" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.Scripting" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.Scripting" />
     <InternalsVisibleTo Include="vbc" />
     <InternalsVisibleTo Include="vbi" />
     <InternalsVisibleTo Include="Microsoft.Build.Tasks.CodeAnalysis" />
     <InternalsVisibleTo Include="VBCSCompiler" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.CommandLine.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.Emit.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.WinRT.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.CommandLine.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.Emit.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.WinRT.UnitTests" />
     <InternalsVisibleTo Include="Roslyn.Compilers.CSharp.EnC.UnitTests" WorkItem="https://github.com/dotnet/roslyn/issues/35071" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.IOperation.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.Semantic.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.Symbol.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.Syntax.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.Test.Utilities" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.UnitTests.Collections" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.CommandLine.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.Emit.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.IOperation.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.Semantic.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.Symbol.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.Syntax.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.Test.Utilities" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.UnitTests.Collections" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.CommandLine.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.Emit.UnitTests" />
     <InternalsVisibleTo Include="Roslyn.Compilers.VisualBasic.EnC.UnitTests" WorkItem="https://github.com/dotnet/roslyn/issues/35071" />
     <InternalsVisibleTo Include="Roslyn.Compilers.VisualBasic.IOperation.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.Semantic.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.Symbol.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.Syntax.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.Test.Utilities" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.ExpressionEvaluator.ExpressionCompiler.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.ExpressionEvaluator.ExpressionCompiler.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.ExpressionEvaluator.ExpressionCompiler.Utilities" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.Semantic.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.Symbol.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.Syntax.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.Test.Utilities" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.ExpressionEvaluator.ExpressionCompiler.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.ExpressionEvaluator.ExpressionCompiler.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.ExpressionEvaluator.ExpressionCompiler.Utilities" />
     <InternalsVisibleTo Include="InteractiveHost.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.Scripting.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.Scripting.Desktop.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.Scripting.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.CSharp.Scripting.Desktop.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.Scripting.UnitTests" />
-    <InternalsVisibleTo Include="Microsoft.CodeAnalysis.VisualBasic.Scripting.Desktop.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.Scripting.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.Scripting.Desktop.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.Scripting.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.CSharp.Scripting.Desktop.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.Scripting.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.CodeAnalysisP.VisualBasic.Scripting.Desktop.UnitTests" />
     <InternalsVisibleTo Include="Roslyn.Test.Utilities" />
     <InternalsVisibleTo Include="Roslyn.Test.PdbUtilities" />
     <InternalsVisibleTo Include="VBCSCompiler.UnitTests" />

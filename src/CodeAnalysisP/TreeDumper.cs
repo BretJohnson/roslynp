@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     // These classes are for debug and testing purposes only. It is frequently handy to be 
     // able to create a string representation of a complex tree-based data type. The idea

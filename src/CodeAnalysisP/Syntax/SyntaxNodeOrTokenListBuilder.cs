@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Microsoft.CodeAnalysis.Syntax
+namespace Microsoft.CodeAnalysisP.Syntax
 {
     internal class SyntaxNodeOrTokenListBuilder
     {

@@ -3,10 +3,10 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Microsoft.CodeAnalysis.PooledObjects;
+using Microsoft.CodeAnalysisP.PooledObjects;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     // Implements simple cache of limited size that could hold 
     // a number of previously created/mapped items.

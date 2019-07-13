@@ -3,7 +3,7 @@
 using System;
 using System.Threading;
 
-namespace Microsoft.CodeAnalysis.Syntax
+namespace Microsoft.CodeAnalysisP.Syntax
 {
     internal partial class SyntaxList
     {

@@ -3,7 +3,7 @@
 using Roslyn.Test.Utilities;
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.UnitTests.Diagnostics
+namespace Microsoft.CodeAnalysisP.UnitTests.Diagnostics
 {
     public partial class DiagnosticCreationTests
     {

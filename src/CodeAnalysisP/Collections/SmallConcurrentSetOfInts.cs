@@ -4,7 +4,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Microsoft.CodeAnalysis.Collections
+namespace Microsoft.CodeAnalysisP.Collections
 {
     /// <summary>
     /// A set of ints that is small, thread-safe and lock free.

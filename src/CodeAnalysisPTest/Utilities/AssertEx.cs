@@ -12,7 +12,7 @@ using System.Text;
 using DiffPlex;
 using DiffPlex.DiffBuilder;
 using DiffPlex.DiffBuilder.Model;
-using Microsoft.CodeAnalysis.Test.Utilities;
+using Microsoft.CodeAnalysisP.Test.Utilities;
 using Xunit;
 
 namespace Roslyn.Test.Utilities

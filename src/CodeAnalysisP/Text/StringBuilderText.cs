@@ -4,7 +4,7 @@ using System;
 using System.Diagnostics;
 using System.Text;
 
-namespace Microsoft.CodeAnalysis.Text
+namespace Microsoft.CodeAnalysisP.Text
 {
     /// <summary>
     /// Implementation of <see cref="SourceText"/> based on a <see cref="StringBuilder"/> input

@@ -5,7 +5,7 @@ using System.Collections.Concurrent;
 using System.IO;
 using System.Runtime.CompilerServices;
 
-namespace Microsoft.CodeAnalysis.Test.Utilities
+namespace Microsoft.CodeAnalysisP.Test.Utilities
 {
     public sealed class TempRoot : IDisposable
     {

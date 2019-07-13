@@ -3,7 +3,7 @@
 using System;
 using System.IO;
 
-namespace Microsoft.CodeAnalysis.Test.Utilities
+namespace Microsoft.CodeAnalysisP.Test.Utilities
 {
     public sealed class DisposableDirectory : TempDirectory, IDisposable
     {

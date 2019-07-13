@@ -9,9 +9,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Test.Utilities;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP;
+using Microsoft.CodeAnalysisP.Test.Utilities;
+using Microsoft.CodeAnalysisP.Text;
 using KeyValuePair = Roslyn.Utilities.KeyValuePairUtil;
 
 namespace Roslyn.Test.Utilities

@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysisP;
 
 namespace Roslyn.Utilities
 {

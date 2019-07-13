@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis.Syntax.InternalSyntax
+namespace Microsoft.CodeAnalysisP.Syntax.InternalSyntax
 {
     internal partial class SyntaxList
     {

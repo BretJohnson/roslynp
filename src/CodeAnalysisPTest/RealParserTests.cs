@@ -4,7 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.UnitTests
+namespace Microsoft.CodeAnalysisP.UnitTests
 {
     public class RealParserTests
     {

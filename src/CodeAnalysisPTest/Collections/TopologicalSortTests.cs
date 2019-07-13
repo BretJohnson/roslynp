@@ -4,11 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysisP;
 using Roslyn.Test.Utilities;
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.UnitTests.Collections
+namespace Microsoft.CodeAnalysisP.UnitTests.Collections
 {
     public class TopologicalSortTests
     {

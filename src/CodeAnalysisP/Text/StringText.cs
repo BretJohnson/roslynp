@@ -7,7 +7,7 @@ using System.IO;
 using System.Text;
 using System.Threading;
 
-namespace Microsoft.CodeAnalysis.Text
+namespace Microsoft.CodeAnalysisP.Text
 {
     /// <summary>
     /// Implementation of SourceText based on a <see cref="String"/> input

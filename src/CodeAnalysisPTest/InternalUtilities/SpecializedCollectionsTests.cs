@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using Xunit;
 
-namespace Microsoft.CodeAnalysis.UnitTests.InternalUtilities
+namespace Microsoft.CodeAnalysisP.UnitTests.InternalUtilities
 {
     public class SpecializedCollectionsTests
     {

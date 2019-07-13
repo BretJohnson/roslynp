@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using Roslyn.Utilities;
 using Microsoft.Win32.SafeHandles;
 
-namespace Microsoft.CodeAnalysis.Test.Utilities
+namespace Microsoft.CodeAnalysisP.Test.Utilities
 {
     public sealed class DisposableFile : TempFile, IDisposable
     {

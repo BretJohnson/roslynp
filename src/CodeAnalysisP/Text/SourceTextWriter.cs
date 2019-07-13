@@ -3,7 +3,7 @@
 using System.IO;
 using System.Text;
 
-namespace Microsoft.CodeAnalysis.Text
+namespace Microsoft.CodeAnalysisP.Text
 {
     internal abstract class SourceTextWriter : TextWriter
     {

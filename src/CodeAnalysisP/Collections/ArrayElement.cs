@@ -2,7 +2,7 @@
 
 using System.Diagnostics;
 
-namespace Microsoft.CodeAnalysis
+namespace Microsoft.CodeAnalysisP
 {
     [DebuggerDisplay("{Value,nq}")]
     internal struct ArrayElement<T>

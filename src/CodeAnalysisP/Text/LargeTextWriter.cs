@@ -3,9 +3,9 @@
 using System;
 using System.Collections.Immutable;
 using System.Text;
-using Microsoft.CodeAnalysis.PooledObjects;
+using Microsoft.CodeAnalysisP.PooledObjects;
 
-namespace Microsoft.CodeAnalysis.Text
+namespace Microsoft.CodeAnalysisP.Text
 {
     internal sealed class LargeTextWriter : SourceTextWriter
     {

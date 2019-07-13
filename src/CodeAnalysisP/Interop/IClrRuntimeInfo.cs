@@ -7,7 +7,7 @@ using System.Text;
 
 #pragma warning disable CS0436 // Type conflicts with imported type: SuppressUnmanagedCodeSecurity
 
-namespace Microsoft.CodeAnalysis.Interop
+namespace Microsoft.CodeAnalysisP.Interop
 {
     [ComImport, InterfaceType(ComInterfaceType.InterfaceIsIUnknown), Guid("BD39D1D2-BA2F-486A-89B0-B4B0CB466891"), SuppressUnmanagedCodeSecurity]
     internal interface IClrRuntimeInfo

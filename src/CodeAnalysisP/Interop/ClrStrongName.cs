@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Security;
 using Roslyn.Utilities;
 
-namespace Microsoft.CodeAnalysis.Interop
+namespace Microsoft.CodeAnalysisP.Interop
 {
     internal static class ClrStrongName
     {

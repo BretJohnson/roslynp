@@ -2,9 +2,9 @@
 
 using System.Diagnostics;
 using System.Threading;
-using Microsoft.CodeAnalysis.Text;
+using Microsoft.CodeAnalysisP.Text;
 
-namespace Microsoft.CodeAnalysis.Syntax
+namespace Microsoft.CodeAnalysisP.Syntax
 {
     /// <summary>
     /// This is a SyntaxReference implementation that lazily translates the result (SyntaxNode) of the
